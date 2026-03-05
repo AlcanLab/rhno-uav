@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Receding-Horizon Nullspace Optimization for Actuation-Aware Control Allocation in Omnidirectional UAVs">
+  <meta name="keywords" content="UAV, Omnidirectional, Control Allocation, Nullspace Optimization, Receding Horizon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RHNO: Receding-Horizon Nullspace Optimization for Omnidirectional UAVs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Receding-Horizon Nullspace Optimization for Actuation-Aware Control
+              Allocation in Omnidirectional UAVs</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Riccardo Pretto<sup>1</sup>,</span>
+              <span class="author-block">
+                Mahmoud Hamandi<sup>2</sup>,</span>
+              <span class="author-block">
+                Abdullah Mohamed Ali<sup>2</sup>,</span>
+              <br><span class="author-block">
+                Gokhan Alcan<sup>1</sup>,</span>
+              <span class="author-block">
+                Anthony Tzes<sup>2</sup>,</span>
+              <span class="author-block">
+                Fares Abu-Dakka<sup>2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Tampere University, Finland</span>
+              <span class="author-block"><sup>2</sup>New York University Abu Dhabi, UAE</span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Fully actuated omnidirectional UAVs enable independent control of forces and torques along all six degrees
+              of freedom, broadening the operational envelope for agile flight and aerial interaction tasks.
+              However, conventional control allocation methods neglect the asymmetric dynamics of the onboard actuators,
+              which can induce oscillatory motor commands and degrade trajectory tracking during dynamic maneuvers.
+            </p>
+            <p>
+              This work proposes a receding-horizon, actuation-aware allocation strategy that explicitly incorporates
+              asymmetric motor dynamics and exploits the redundancy of over-actuated platforms through nullspace
+              optimization.
+              By forward-simulating the closed-loop system over a prediction horizon, the method anticipates
+              actuator-induced oscillations and suppresses them through smooth redistribution of motor commands, while
+              preserving the desired body wrench exactly.
+            </p>
+            <p>
+              The approach is formulated as a constrained optimal control problem solved online via Constrained
+              iterative LQR.
+              Simulation results on the OmniOcta platform demonstrate that the proposed method significantly reduces
+              motor command oscillations compared to a conventional single-step quadratic programming allocator,
+              yielding improved trajectory tracking in both position and orientation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <!-- Key Highlights Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Highlights</h2>
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <div class="highlight-card has-text-centered">
+            <span class="icon is-large">
+              <i class="fas fa-cogs fa-2x"></i>
+            </span>
+            <h3 class="title is-5 mt-3">Actuation-Aware</h3>
+            <p>Explicitly incorporates asymmetric motor dynamics into the control allocation, anticipating
+              actuator-induced oscillations.</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="highlight-card has-text-centered">
+            <span class="icon is-large">
+              <i class="fas fa-project-diagram fa-2x"></i>
+            </span>
+            <h3 class="title is-5 mt-3">Nullspace Optimization</h3>
+            <p>Exploits the redundancy of over-actuated platforms through nullspace optimization to smooth motor
+              commands while preserving the desired wrench.</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="highlight-card has-text-centered">
+            <span class="icon is-large">
+              <i class="fas fa-chart-line fa-2x"></i>
+            </span>
+            <h3 class="title is-5 mt-3">Receding-Horizon</h3>
+            <p>Forward-simulates the closed-loop system over a prediction horizon, solved online via Constrained
+              iterative LQR.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Methodology Section -->
+  <section class="section" id="methodology">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Methodology</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our approach formulates the actuation-aware control allocation as a constrained optimal control problem.
+              The key insight is to exploit the nullspace of the allocation matrix to redistribute motor commands in a
+              way that accounts for asymmetric motor dynamics—motors spin up faster than they spin down—over a receding
+              prediction horizon.
+              This enables the allocator to anticipate and suppress oscillatory commands before they degrade tracking
+              performance.
+            </p>
+          </div>
+          <div class="has-text-centered">
+            <img src="./static/images/method.png" class="method-image"
+              alt="Overview of the proposed receding-horizon nullspace optimization method."
+              style="max-width: 100%; height: auto;">
+            <p class="mt-2 has-text-grey">
+              <em>Overview of the proposed receding-horizon nullspace optimization for actuation-aware control
+                allocation.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper video. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <!-- Replace YOUR_VIDEO_ID with the actual YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <p class="mt-3 has-text-grey-light">
+            <em>Video coming soon.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Paper video. -->
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{pretto2025rhno,
+  author    = {Pretto, Riccardo and Hamandi, Mahmoud and Ali, Abdullah Mohamed and Alcan, Gokhan and Tzes, Anthony and Abu-Dakka, Fares},
+  title     = {Receding-Horizon Nullspace Optimization for Actuation-Aware Control Allocation in Omnidirectional UAVs},
+  journal   = {arXiv preprint arXiv:25XX.XXXXX},
+  year      = {2025},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              The content of this website is provided for academic and research purposes. If you use this work or build
+              upon it, please cite the associated paper.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

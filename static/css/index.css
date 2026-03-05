@@ -1,0 +1,131 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Method image styling */
+.method-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlights section */
+.highlight-card {
+  background: #f9f9ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card .icon {
+  color: hsl(204, 86%, 53%);
+  margin-bottom: 0.75rem;
+}
+
+/* Conference badge */
+.conference-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, hsl(204, 86%, 53%), hsl(217, 71%, 45%));
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* BibTeX styling */
+#BibTeX pre {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* Placeholder banners */
+.placeholder-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-banner .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder-banner p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
